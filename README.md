@@ -59,10 +59,10 @@ Upon launching, you will be given a starting balance of `$1000`. You can choose 
 
 ## 🗺️ Roadmap
 
-- [ ] Add **Blackjack** (21) mini-game with hit/stand logic.
-- [ ] Add **Poker** (Texas Hold'em) against AI dealers.
-- [ ] Implement local save/load functionality to keep your balance between terminal sessions.
-- [ ] Upgrade UI with colored terminal text utilizing libraries like `colorama` or `rich`.
+- [x] Add **Blackjack** (21) mini-game with hit/stand logic.
+- [x] Implement local save/load functionality to keep your balance between terminal sessions.
+- [x] Upgrade UI with colored terminal text utilizing `colorama`.
+- [ ] Add **Video Poker** mini-game (coming soon!).
 
 ## 🤝 Contributing
 

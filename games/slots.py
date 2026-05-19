@@ -1,22 +1,23 @@
 import random
 import time
+from colorama import Fore, Style
 
 def play_slots(bet):
     symbols = ['🍒', '🍋', '🍉', '⭐', '🔔', '💎']
-    print("\n🎰 Spinning the Slot Machine...")
+    print(f"\n{Fore.MAGENTA}🎰 Spinning the Slot Machine...{Style.RESET_ALL}")
     time.sleep(1)
     
     result = [random.choice(symbols) for _ in range(3)]
-    print(f"\n   [{result[0]}] [{result[1]}] [{result[2]}]   \n")
+    print(f"\n   {Fore.WHITE}[{result[0]}] [{result[1]}] [{result[2]}]{Style.RESET_ALL}   \n")
 
     if result[0] == result[1] == result[2]:
         winnings = bet * 10
-        print(f"🎉 JACKPOT! All three match! You won ${winnings}!")
+        print(f"{Fore.GREEN}🎉 JACKPOT! All three match! You won ${winnings}!{Style.RESET_ALL}")
         return winnings
     elif result[0] == result[1] or result[1] == result[2] or result[0] == result[2]:
         winnings = bet * 2
-        print(f"Nice! Two of a kind. You won ${winnings}!")
+        print(f"{Fore.YELLOW}Nice! Two of a kind. You won ${winnings}!{Style.RESET_ALL}")
         return winnings
     else:
-        print(f"No match. You lost ${bet}.")
+        print(f"{Fore.RED}No match. You lost ${bet}.{Style.RESET_ALL}")
         return -bet
